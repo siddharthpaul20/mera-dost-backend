@@ -1,0 +1,9 @@
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):53 - Inside storeFile ::: file :--->  org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@220ad683
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):54 - Inside storeFile ::: relativePath :--->  Market Basket Analysis.doc
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):57 - fileName ::: -->  Market Basket Analysis.doc
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):42 - E:\Projects\STS workspace\MeraDost\uploads\Market Basket Analysis.doc
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):45 - E:\Projects\STS workspace\MeraDost\uploads
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):42 - E:\Projects\STS workspace\MeraDost\uploads\Market Basket Analysis.doc
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):45 - E:\Projects\STS workspace\MeraDost\uploads
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):75 - false is returned.
+2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):82 - targetLocation ::: -->  E:\Projects\STS workspace\MeraDost\uploads\Market Basket Analysis.doc
