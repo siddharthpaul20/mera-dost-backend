@@ -3,7 +3,14 @@ package com.siddharth.commons;
 public enum FileType {
 	
 	pdf("pdf"),
+	doc("doc"),
 	docx("docx"),
+	ppt("ppt"),
+	pptx("pptx"),
+	odt("odt"),
+	png("png"),
+	jpeg("jpeg"),
+	jpg("jpg"),
 	invalid("invalid");
 
 	

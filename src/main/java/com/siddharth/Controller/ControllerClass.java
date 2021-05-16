@@ -40,46 +40,35 @@ public class ControllerClass {
 		logger.info("Exiting Initializing class of ControllerClass");
 	}
 	 
-	@PostMapping(path = "/convertDocxToPdf",consumes = "multipart/form-data", produces = MediaType.APPLICATION_PDF_VALUE)
+	@PostMapping(path = "/convertDocument",consumes = "multipart/form-data", produces = MediaType.APPLICATION_PDF_VALUE)
     public ResponseEntity<InputStreamResource> convertDocxToPdf(@RequestParam("inputFile") MultipartFile file,
     		@RequestParam("inputType") String inputType, @RequestParam("outputType") String outputType)
     {
-		logger.debug("Entering convertDocxToPdf()");
+		logger.debug("Entering convertDocument()");
 		ResponseEntity<InputStreamResource> response = null;
 		try {
 			String fileName = mServiceManager.convertFile(inputType, outputType, file);
-			System.out.println(new File(".").getAbsoluteFile());
-			ClassPathResource pdfFile = new ClassPathResource("uploads/"+fileName);
-//			Path path = Paths.get(fileName);
-//	        byte[] data = Files.readAllBytes(path);
-//	        ByteArrayResource resource = new ByteArrayResource(data);
-//	 
-//	        return ResponseEntity.ok()
-//	                // Content-Disposition
-//	                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=" + path.getFileName().toString())
-//	                // Content-Type
-//	                .contentType(MediaType.APPLICATION_OCTET_STREAM) //
-//	                // Content-Lengh
-//	                .contentLength(data.length) //
-//	                .body(resource);
-			
-			HttpHeaders headers = new HttpHeaders();
-			  headers.setContentType(MediaType.parseMediaType("application/pdf"));
-			  headers.add("Access-Control-Allow-Methods", "GET, POST, PUT");
-			  headers.add("Access-Control-Allow-Headers", "Content-Type");
-			  headers.add("Access-Control-Expose-Headers", "Content-Disposition");
-			  headers.add("Content-Disposition", "filename=" + fileName);
-			  headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
-			  headers.add("Pragma", "no-cache");
-			  headers.add("Expires", "0");
-			 
-			  headers.setContentLength(pdfFile.contentLength());
-			 response = new ResponseEntity<InputStreamResource>(
-			    new InputStreamResource(pdfFile.getInputStream()), headers, HttpStatus.OK);
+			response = mServiceManager.getResponseObjectToSendFile(fileName, MediaType.APPLICATION_PDF_VALUE);
 		} catch (Exception e) {
-			logger.error("Exception occured in convertDocxToPdf()",e);
+			logger.error("Exception occured in convertDocument()",e);
 		}
-		logger.debug("Exiting convertDocxToPdf()");
+		logger.debug("Exiting convertDocument()");
+		return response;
+    }
+	
+	@PostMapping(path = "/compressDocument",consumes = "multipart/form-data", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+    public ResponseEntity<InputStreamResource> compressDocument(@RequestParam("inputFile") MultipartFile file,
+    		@RequestParam("inputType") String inputType)
+    {
+		logger.debug("Entering compressDocument()");
+		ResponseEntity<InputStreamResource> response = null;
+		try {
+			String fileName = mServiceManager.compressFile(inputType, file);
+			response = mServiceManager.getResponseObjectToSendFile(fileName, MediaType.APPLICATION_OCTET_STREAM_VALUE);
+		} catch (Exception e) {
+			logger.error("Exception occured in compressDocument()",e);
+		}
+		logger.debug("Exiting compressDocument()");
 		return response;
     }
 

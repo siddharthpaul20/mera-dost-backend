@@ -7,12 +7,14 @@ public class PdfToDocxConvertor extends Convertor {
 	}
 	
 	@Override
-	public void convertToPdf(String inputType, String pathOfDownloadedFileOnServer) {
+	public String convertToPdf(String inputType, String pathOfDownloadedFileOnServer, String uploadDirectoryPath) {
 		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public void convertToDocx(String inputType, String pathOfDownloadedFileOnServer) {
+	public String convertToDocx(String inputType, String pathOfDownloadedFileOnServer, String uploadDirectoryPath) {
 		// TODO Auto-generated method stub
+		return null;
 	}
 }
