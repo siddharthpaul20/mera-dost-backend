@@ -15,3 +15,7 @@
 2021-05-19 23:30:28 INFO  com.siddharth.ServiceManager.ServiceManager(1):42 - Entering intialization of ServiceManager
 2021-05-19 23:30:28 INFO  com.siddharth.ServiceManager.ServiceManager(1):48 - Exiting intialization of ServiceManager
 2021-05-19 23:30:28 INFO  com.siddharth.Controller.ControllerClass(1):41 - Exiting Initializing class of ControllerClass
+2021-05-19 23:42:13 INFO  com.siddharth.Controller.ControllerClass(1):39 - Entering Initializing class of ControllerClass
+2021-05-19 23:42:13 INFO  com.siddharth.ServiceManager.ServiceManager(1):42 - Entering intialization of ServiceManager
+2021-05-19 23:42:13 INFO  com.siddharth.ServiceManager.ServiceManager(1):48 - Exiting intialization of ServiceManager
+2021-05-19 23:42:13 INFO  com.siddharth.Controller.ControllerClass(1):41 - Exiting Initializing class of ControllerClass

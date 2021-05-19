@@ -52,8 +52,6 @@ public class ControllerClass {
 			response = mServiceManager.getResponseObjectToSendFile(fileName, MediaType.APPLICATION_PDF_VALUE);
 		} catch (Exception e) {
 			logger.error("Exception occured in convertDocument()",e);
-			return ResponseEntity.status(HttpStatus.FORBIDDEN)
-		            .body("some body ");
 		}
 		logger.debug("Exiting convertDocument()");
 		return response;
