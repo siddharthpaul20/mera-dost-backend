@@ -52,6 +52,7 @@ public class ControllerClass {
 			response = mServiceManager.getResponseObjectToSendFile(fileName, MediaType.APPLICATION_PDF_VALUE);
 		} catch (Exception e) {
 			logger.error("Exception occured in convertDocument()",e);
+			response = new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		logger.debug("Exiting convertDocument()");
 		return response;
@@ -68,6 +69,7 @@ public class ControllerClass {
 			response = mServiceManager.getResponseObjectToSendFile(fileName, MediaType.APPLICATION_OCTET_STREAM_VALUE);
 		} catch (Exception e) {
 			logger.error("Exception occured in compressDocument()",e);
+			response = new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		logger.debug("Exiting compressDocument()");
 		return response;
