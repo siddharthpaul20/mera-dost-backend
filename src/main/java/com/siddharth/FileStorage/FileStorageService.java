@@ -98,7 +98,7 @@ public class FileStorageService {
 
             //Changes made by me
              
-            makeTheDirectoriesInRelativePath(this.fileStorageLocation.resolve(relativePath).toString());
+            //makeTheDirectoriesInRelativePath(this.fileStorageLocation.resolve(relativePath).toString());
             Path targetLocation;
             if(makeTheDirectoriesInRelativePath(this.fileStorageLocation.resolve(relativePath).toString()))
             {
