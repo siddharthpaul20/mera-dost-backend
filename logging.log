@@ -7,3 +7,11 @@
 2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):45 - E:\Projects\STS workspace\MeraDost\uploads
 2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):75 - false is returned.
 2021-05-02 22:39:44 INFO  com.siddharth.FileStorage.FileStorageService(1):82 - targetLocation ::: -->  E:\Projects\STS workspace\MeraDost\uploads\Market Basket Analysis.doc
+2021-05-19 23:29:41 INFO  com.siddharth.Controller.ControllerClass(1):39 - Entering Initializing class of ControllerClass
+2021-05-19 23:29:41 INFO  com.siddharth.ServiceManager.ServiceManager(1):42 - Entering intialization of ServiceManager
+2021-05-19 23:29:41 INFO  com.siddharth.ServiceManager.ServiceManager(1):48 - Exiting intialization of ServiceManager
+2021-05-19 23:29:41 INFO  com.siddharth.Controller.ControllerClass(1):41 - Exiting Initializing class of ControllerClass
+2021-05-19 23:30:28 INFO  com.siddharth.Controller.ControllerClass(1):39 - Entering Initializing class of ControllerClass
+2021-05-19 23:30:28 INFO  com.siddharth.ServiceManager.ServiceManager(1):42 - Entering intialization of ServiceManager
+2021-05-19 23:30:28 INFO  com.siddharth.ServiceManager.ServiceManager(1):48 - Exiting intialization of ServiceManager
+2021-05-19 23:30:28 INFO  com.siddharth.Controller.ControllerClass(1):41 - Exiting Initializing class of ControllerClass

@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -51,6 +52,8 @@ public class ControllerClass {
 			response = mServiceManager.getResponseObjectToSendFile(fileName, MediaType.APPLICATION_PDF_VALUE);
 		} catch (Exception e) {
 			logger.error("Exception occured in convertDocument()",e);
+			return ResponseEntity.status(HttpStatus.FORBIDDEN)
+		            .body("some body ");
 		}
 		logger.debug("Exiting convertDocument()");
 		return response;
@@ -71,5 +74,15 @@ public class ControllerClass {
 		logger.debug("Exiting compressDocument()");
 		return response;
     }
+	
+	@GetMapping(path = "/")
+	public ResponseEntity<String> serverStartedMessage()
+	{
+		logger.debug("Entering serverStartedMessage()");
+		ResponseEntity<String> response = new ResponseEntity<>("Mera dost backend is active.", 
+				   HttpStatus.OK);
+		logger.debug("Exiting serverStartedMessage()");
+		return response;
+	}
 
 }
