@@ -5,7 +5,11 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 
+import org.apache.commons.collections4.MultiValuedMap;
+import org.apache.commons.collections4.map.HashedMap;
+import org.apache.commons.collections4.map.MultiValueMap;
 import org.apache.log4j.Logger;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.ClassPathResource;
@@ -14,6 +18,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -52,7 +57,9 @@ public class ControllerClass {
 			response = mServiceManager.getResponseObjectToSendFile(fileName, MediaType.APPLICATION_PDF_VALUE);
 		} catch (Exception e) {
 			logger.error("Exception occured in convertDocument()",e);
-			response = new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+			LinkedMultiValueMap<String, String> mapOfError = new LinkedMultiValueMap<String, String>();
+			mapOfError.add("errorMessage", e.getMessage());
+			response = new ResponseEntity<>(mapOfError, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		logger.debug("Exiting convertDocument()");
 		return response;
@@ -69,7 +76,9 @@ public class ControllerClass {
 			response = mServiceManager.getResponseObjectToSendFile(fileName, MediaType.APPLICATION_OCTET_STREAM_VALUE);
 		} catch (Exception e) {
 			logger.error("Exception occured in compressDocument()",e);
-			response = new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+			LinkedMultiValueMap<String, String> mapOfError = new LinkedMultiValueMap<String, String>();
+			mapOfError.add("errorMessage", e.getMessage());
+			response = new ResponseEntity<>(mapOfError, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		logger.debug("Exiting compressDocument()");
 		return response;
