@@ -75,6 +75,10 @@ public class FileStorageService {
     	logger.debug("Entering makeTheDirectoriesInRelativePath()");
     	logger.info(relativePath);
     	int positionOfLastSlash = relativePath.lastIndexOf('\\');
+    	if(positionOfLastSlash == -1)
+    		positionOfLastSlash = relativePath.lastIndexOf('/');
+    	if(positionOfLastSlash == -1)
+    		return false;
     	String excludingTheFile = relativePath.substring(0,positionOfLastSlash);
     	logger.info(excludingTheFile);
     	File f = new File(excludingTheFile);
@@ -98,7 +102,7 @@ public class FileStorageService {
 
             //Changes made by me
              
-            //makeTheDirectoriesInRelativePath(this.fileStorageLocation.resolve(relativePath).toString());
+            makeTheDirectoriesInRelativePath(this.fileStorageLocation.resolve(relativePath).toString());
             Path targetLocation;
             if(makeTheDirectoriesInRelativePath(this.fileStorageLocation.resolve(relativePath).toString()))
             {
