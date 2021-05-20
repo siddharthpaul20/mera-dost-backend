@@ -83,7 +83,7 @@ public class ServiceManager {
 	{
 		logger.debug("Entering getPathOfDownloadedFileOnServerFromName()");
 		logger.debug("Exiting getPathOfDownloadedFileOnServerFromName()");
-		return mFileStorageService.getFileStorageLocation()+"\\"+fileName;
+		return mFileStorageService.getFileStorageLocation()+"/"+fileName;
 	}
 	
 	public String getPathOfConvertedFileOnServerFromName(String fileName, String outputType)
