@@ -74,9 +74,9 @@ public class FileStorageService {
     {
     	logger.debug("Entering makeTheDirectoriesInRelativePath()");
     	logger.info(relativePath);
-    	int positionOfLastSlash = relativePath.lastIndexOf('\\');
+    	int positionOfLastSlash = relativePath.lastIndexOf("\\");
     	if(positionOfLastSlash == -1)
-    		positionOfLastSlash = relativePath.lastIndexOf('/');
+    		positionOfLastSlash = relativePath.lastIndexOf("/");
     	if(positionOfLastSlash == -1)
     		return false;
     	String excludingTheFile = relativePath.substring(0,positionOfLastSlash);
