@@ -1,0 +1,565 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">.b1{white-space-collapsing:preserve;}
+.b2{margin: 1.0in 1.25in 1.0in 1.25in;}
+.s1{font-weight:bold;}
+.s2{color:blue;text-decoration:underline;}
+.s3{font-style:italic;}
+.s4{display: inline-block; text-indent: 0; min-width: 0.2361111in;}
+.s5{font-size:14pt;font-weight:bold;}
+.s6{color:#000066;}
+.s7{font-style:italic;color:#000066;}
+.s8{font-weight:bold;color:#000066;}
+.p1{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:24pt;}
+.p2{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:18pt;}
+.p3{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:12pt;}
+.p4{margin-left:0.5in;margin-right:0.5in;margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:12pt;}
+.p5{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:12pt;}
+.p6{text-indent:-0.25in;margin-left:0.5in;margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:12pt;}
+.p7{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:center;hyphenate:auto;font-family:Times New Roman;font-size:12pt;}
+.p8{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:center;hyphenate:auto;font-family:Times New Roman;font-size:14pt;}
+.p9{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:start;hyphenate:auto;font-family:Verdana;font-size:10pt;}
+.p10{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:center;hyphenate:auto;font-family:Verdana;font-size:10pt;}
+.p11{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:end;hyphenate:auto;font-family:Times New Roman;font-size:12pt;}
+.td1{width:1.9416667in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td2{width:3.8270833in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td3{width:1.8743056in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td4{width:2.6666667in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td5{width:0.65347224in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td6{width:0.8472222in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td7{width:1.6548611in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td8{width:0.42083332in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td9{width:0.42152777in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td10{width:0.46805555in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td11{width:0.95555556in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.td12{width:0.87708336in;padding-start:0.010416667in;padding-end:0.010416667in;border-bottom:thin double lightgray;border-left:thin double lightgray;border-right:thin double lightgray;border-top:thin double lightgray;}
+.r1{keep-together:always;}
+.t1{table-layout:fixed;border-collapse:collapse;border-spacing:0;}
+</style>
+<title>Market Basket Analysis</title>
+<meta content="Amit" name="author">
+</head>
+<body class="b1 b2">
+<p class="p1">
+<span class="s1">Market Basket Analysis</span>
+</p>
+<p class="p2">
+<span class="s1">What is it?</span>
+</p>
+<p class="p3">
+<span>Market Basket Analysis is a modelling technique based upon the theory that if you buy a certain group of items, you are more (or less) likely to buy another group of items. For example, if you are in an English pub and you buy a pint of beer and don't buy a bar meal, you are more likely to buy crisps (US. chips) at the same time than somebody who didn't buy beer. </span>
+</p>
+<p class="p3">
+<span>The set of items a customer buys is referred to as an </span><span class="s1">itemset</span><span>, and market basket analysis seeks to find relationships between purchases. </span>
+</p>
+<p class="p3">
+<span>Typically the relationship will be in the form of a rule: </span>
+</p>
+<p class="p4">
+<span>IF {beer, no bar meal} THEN {crisps}. </span>
+</p>
+<p class="p5">
+<span>The probability that a customer will buy beer without a bar meal (i.e. that the antecedent is true) is referred to as the </span><span class="s1">support</span><span> for the rule. The conditional probability that a customer will purchase crisps is referred to as the </span><span class="s1">confidence</span><span>. </span>
+</p>
+<p class="p3">
+<span>The algorithms for performing market basket analysis are fairly straightforward (</span><a href="http://www.albionresearch.com/cgi-bin/isbn.php?isbn=0471179809&amp;title=Data+Mining+Techniques"><span class="s2">Berry and Linhoff</span></a><span> is a reasonable introductory resource for this). The complexities mainly arise in exploiting taxonomies, avoiding combinatorial explosions (a supermarket may stock 10,000 or more line items), and dealing with the large amounts of transaction data that may be available. </span>
+</p>
+<p class="p3">
+<span>A major difficulty is that a large number of the rules found may be trivial for anyone familiar with the business. Although the volume of data has been reduced, we are still asking the user to find a needle in a haystack. Requiring rules to have a high minimum support level and a high confidence level risks missing any exploitable result we might have found. One partial solution to this problem is </span><span class="s3">differential market basket analysis</span><span>, as described below. </span>
+</p>
+<p class="p2">
+<span class="s1">How is it used?</span>
+</p>
+<p class="p3">
+<span>In retailing, </span><span class="s3">most purchases are bought on impulse</span><span>. Market basket analysis gives clues as to what a customer might have bought </span><span class="s3">if the idea had occurred to them</span><span>. (For some real insights into consumer behavior, see </span><a href="http://www.albionresearch.com/cgi-bin/isbn.php?isbn=0684849135&amp;title=Why+We+Buy%3A+The+Science+of+Shopping"><span class="s2">Why We Buy: The Science of Shopping</span></a><span> by Paco Underhill.) </span>
+</p>
+<p class="p3">
+<span>As a first step, therefore, market basket analysis can be used in deciding the location and promotion of goods inside a store. If, as has been observed, purchasers of Barbie dolls have are more likely to buy candy, then high-margin candy can be placed near to the Barbie doll display. Customers who would have bought candy with their Barbie dolls </span><span class="s3">had they thought of it</span><span> will now be suitably tempted. </span>
+</p>
+<p class="p3">
+<span>But this is only the first level of analysis. </span><span class="s1">Differential market basket analysis</span><span> can find interesting results and can also eliminate the problem of a potentially high volume of trivial results. </span>
+</p>
+<p class="p3">
+<span>In differential analysis, we compare results between different stores, between customers in different demographic groups, between different days of the week, different seasons of the year, etc. </span>
+</p>
+<p class="p3">
+<span>If we observe that a rule holds in one store, but not in any other (or does not hold in one store, but holds in all others), then we know that there is something interesting about that store. Perhaps its clientele are different, or perhaps it has organized its displays in a novel and more lucrative way. Investigating such differences may yield useful insights which will improve company sales. </span>
+</p>
+<p class="p2">
+<span class="s1">Other Application Areas</span>
+</p>
+<p class="p3">
+<span>Although Market Basket Analysis conjures up pictures of shopping carts and supermarket shoppers, it is important to realize that there are many other areas in which it can be applied. These include: </span>
+</p>
+<p class="p6">
+<span class="s4">​&nbsp;</span><span>Analysis of credit card purchases. </span>
+</p>
+<p class="p6">
+<span class="s4">​&nbsp;</span><span>Analysis of telephone calling patterns. </span>
+</p>
+<p class="p6">
+<span class="s4">​&nbsp;</span><span>Identification of fraudulent medical insurance claims. </span>
+<br>
+<span>(Consider cases where common rules are broken). </span>
+</p>
+<p class="p6">
+<span class="s4">​&nbsp;</span><span>Analysis of telecom service purchases. </span>
+</p>
+<p class="p3">
+<span>Note that despite the terminology, there is no requirement for all the items to be purchased at the same time. The algorithms can be adapted to look at a sequence of purchases (or events) spread out over time. A </span><span class="s3">predictive market basket analysis</span><span> can be used to identify sets of item purchases (or events) that generally occur in sequence &mdash; something of interest to direct marketers, criminologists and many others. </span>
+</p>
+<p class="p5"></p>
+<p class="p7"></p>
+<p class="p7"></p>
+<p class="p7"></p>
+<p class="p7"></p>
+<p class="p7"></p>
+<p class="p8">
+<span class="s1">What is Market Basket Analysis? </span>
+</p>
+<p class="p7"></p>
+<p class="p3">
+<span>Market basket analysis is a tool of knowledge discovery about co-occurrence of nominal or categorical items. Market Basket Transaction or Market Basket Analysis is a data mining technique to derive association between two data sets. We have categorical data of transaction records as input to the analysis and the output of the analysis is association rules as a new knowledge directly from data. </span>
+</p>
+<p class="p3">
+<span>Let us start with a simple example. Suppose you have a transaction data from a small fruit store and the numbers of transactions in one day are limited as the data shown below. </span>
+</p>
+<p class="p5">
+<span class="s1">Input: Transaction Records </span>
+</p>
+<table class="t1">
+<tbody>
+<tr class="r1">
+<td class="td1">
+<p class="p7">
+<span class="s1">Transaction ID </span>
+</p>
+</td><td class="td2">
+<p class="p3">
+<span class="s1">Items from the customers who bought more than 1 items </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td1">
+<p class="p7">
+<span>1 </span>
+</p>
+</td><td class="td2">
+<p class="p3">
+<span>Apple, Banana, Cherry, Durian </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td1">
+<p class="p7">
+<span>2 </span>
+</p>
+</td><td class="td2">
+<p class="p3">
+<span>Apple, Durian </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td1">
+<p class="p7">
+<span>3 </span>
+</p>
+</td><td class="td2">
+<p class="p3">
+<span>Banana, Durian </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td1">
+<p class="p7">
+<span>4 </span>
+</p>
+</td><td class="td2">
+<p class="p3">
+<span>Durian, Banana, Cherry </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td1">
+<p class="p7">
+<span>5 </span>
+</p>
+</td><td class="td2">
+<p class="p3">
+<span>Banana, Durian </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td1">
+<p class="p7">
+<span>6 </span>
+</p>
+</td><td class="td2">
+<p class="p3">
+<span>Apple, Banana </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td1">
+<p class="p7">
+<span>7 </span>
+</p>
+</td><td class="td2">
+<p class="p3">
+<span>Apple, Cherry, Durian </span>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="p3">
+<span>&nbsp; </span>
+</p>
+<p class="p3">
+<span>Based on the data above, we can derive the following output of association rules using Market Basket Analysis: </span>
+</p>
+<p class="p5">
+<span class="s1">Output: Association Rules</span><span> </span>
+</p>
+<table class="t1">
+<tbody>
+<tr class="r1">
+<td class="td3">
+<p class="p3">
+<span class="s1">People who bought this item </span>
+</p>
+</td><td class="td4">
+<p class="p3">
+<span class="s1">Also bought the following items </span>
+</p>
+</td><td class="td5">
+<p class="p3">
+<span class="s1">Support </span>
+</p>
+</td><td class="td6">
+<p class="p3">
+<span class="s1">Confidence </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td3">
+<p class="p3">
+<span>Banana </span>
+</p>
+</td><td class="td4">
+<p class="p3">
+<span>Durian </span>
+</p>
+</td><td class="td5">
+<p class="p3">
+<span>57% </span>
+</p>
+</td><td class="td6">
+<p class="p3">
+<span>80% </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td3">
+<p class="p3">
+<span>Cherry </span>
+</p>
+</td><td class="td4">
+<p class="p3">
+<span>Durian </span>
+</p>
+</td><td class="td5">
+<p class="p3">
+<span>43% </span>
+</p>
+</td><td class="td6">
+<p class="p3">
+<span>100% </span>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="p3">
+<span>&nbsp; </span>
+</p>
+<p class="p3">
+<span>The association rule will have the following form </span>
+</p>
+<p class="p7">
+<img src="imgs/0.png" style="width:0.40625in;height:0.20833333in;vertical-align:text-bottom;"></p>
+<p class="p3">
+<span>That form has meaning of &ldquo;people who bought items on set X are often also bought items on set Y&rdquo;. For example, if X = {Apple, Banana} and Y = {Cherry, Durian} and we get the association rule indicates that people who bought Apple and Banana also bought Cherry and Durian. </span>
+</p>
+<p class="p3">
+<span>Support and confidence are two measures of association rules. </span>
+</p>
+<p class="p3">
+<span>Support is the frequency of transactions to have the all the items on both sets X and Y are bought together. For example, a support of 5% shows that 5% of all transactions (that we consider for the analysis) indicate that items on set X and Y are purchased together. In formula, support can be computed as probability of the union of set X and set Y. </span>
+</p>
+<p class="p7">
+<img src="imgs/34d.png" style="width:2.6979167in;height:0.38541666in;vertical-align:text-bottom;"></p>
+<p class="p3">
+<span>Notation of support count indicates the total frequency of the set union and is the total number of transactions for the analysis. A rule that has very low support may occurs simply by chance. We can also view Support as the number of instances that the association rules will predict correctly. </span>
+</p>
+<p class="p3">
+<span>Confidence of 80% shows that 80% of the customers who bought items on set X also bought items on set Y. In formula, confidence is computed as conditional probability to obtain set Y given set X. The conditional probability also can be computed through proportion of supports. </span>
+</p>
+<p class="p7">
+<img src="imgs/9af.png" style="width:2.8020833in;height:0.40625in;vertical-align:text-bottom;"></p>
+<p class="p3">
+<span>Notation is the total frequency of set X. Confidence is a measure of accuracy or reliability about the inference made by the rule that the number of instances that the association rules will predict correctly among all instances it applies to. </span>
+</p>
+<p class="p3">
+<span>To obtain the association rules, we usually apply two criteria: </span>
+</p>
+<p class="p6">
+<span class="s4">1.​&nbsp;</span><span>Minimum support </span>
+</p>
+<p class="p6">
+<span class="s4">2.​&nbsp;</span><span>Minimum confidence </span>
+</p>
+<p class="p7">
+<span class="s1">Sprea</span><span class="s5">dsheet Computation of Market Basket Analysis </span>
+</p>
+<p class="p9">
+<span class="s6">For our demonstration example, we have only 4 items (Apple, Banana, Cherry and Durian), therefore it is possible to compute exhaustively. We will use MS Excel 2007 for this purpose. </span>
+</p>
+<p class="p9">
+<span class="s6">Step by step computation of Market Basket Analysis is as follow: </span>
+</p>
+<p class="p9">
+<span class="s6">&bull;&nbsp; Generate all possible association rules </span>
+</p>
+<p class="p9">
+<span class="s6">&bull;&nbsp; Compute the support and confidence of all possible association rules </span>
+</p>
+<p class="p9">
+<span class="s6">&bull;&nbsp; Apply two threshold criteria: </span><span class="s7">minimum support </span><span class="s6">and </span><span class="s7">minimum confidence </span><span class="s6">to obtain the association rules. </span>
+</p>
+<p class="p7">
+<span class="s1">Generating All Possible Association Rules </span>
+</p>
+<p class="p9">
+<span class="s6">Let us call the items currently seen by the customer as X (independent variable) and the other items associated to those current items as Y (dependent variable). </span>
+</p>
+<p class="p9">
+<span class="s6">If you have only two items, name A and B, we have only two possible association rules: </span>
+</p>
+<p class="p10">
+<img src="imgs/10a1.png" style="width:0.65625in;height:0.20833333in;vertical-align:text-bottom;"></p>
+<p class="p10">
+<img src="imgs/144c.png" style="width:0.65625in;height:0.20833333in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">If you have only three items, name A, B and C, we have 12 possible association rules:</span>
+</p>
+<p class="p10">
+<img src="imgs/17f6.png" style="width:1.5104166in;height:2.0in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">Notice that the independent variable (X) is combination of items up to d-1, where d is the number of items. Dependent variable (Y) is the combination of the set difference between all items and items listen on the dependent variable. </span>
+</p>
+<p class="p9">
+<span class="s6">For our demonstration example, we have 4 items that generate 50 possible association rules as shown below. </span>
+</p>
+<p class="p9">
+<img src="imgs/4171.png" style="width:6.25in;height:1.6875in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">In general, the total number of possible association rules, R, is exponential to the number of items, d, which is according to the following formula (Tan, Steinbach &amp; Kumar, 2006): </span>
+</p>
+<p class="p10">
+<img src="imgs/b9c7.png" style="width:1.2291666in;height:0.20833333in;vertical-align:text-bottom;"></p>
+<table class="t1">
+<tbody>
+<tr class="r1">
+<td class="td7">
+<p class="p3">
+<span>Total number of items, d </span>
+</p>
+</td><td class="td8">
+<p class="p11">
+<span>1 </span>
+</p>
+</td><td class="td8">
+<p class="p11">
+<span>2 </span>
+</p>
+</td><td class="td8">
+<p class="p11">
+<span>3 </span>
+</p>
+</td><td class="td9">
+<p class="p11">
+<span>4 </span>
+</p>
+</td><td class="td9">
+<p class="p11">
+<span>5 </span>
+</p>
+</td><td class="td10">
+<p class="p11">
+<span>10 </span>
+</p>
+</td><td class="td11">
+<p class="p11">
+<span>100 </span>
+</p>
+</td><td class="td12">
+<p class="p11">
+<span>500 </span>
+</p>
+</td>
+</tr>
+<tr class="r1">
+<td class="td7">
+<p class="p3">
+<span>Total possible association rules, R </span>
+</p>
+</td><td class="td8">
+<p class="p11">
+<span>0 </span>
+</p>
+</td><td class="td8">
+<p class="p11">
+<span>2 </span>
+</p>
+</td><td class="td8">
+<p class="p11">
+<span>12 </span>
+</p>
+</td><td class="td9">
+<p class="p11">
+<span>50 </span>
+</p>
+</td><td class="td9">
+<p class="p11">
+<span>180 </span>
+</p>
+</td><td class="td10">
+<p class="p11">
+<span>57002 </span>
+</p>
+</td><td class="td11">
+<p class="p11">
+<span>5.15378E+47 </span>
+</p>
+</td><td class="td12">
+<p class="p11">
+<span>3.636E+238 </span>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="p9">
+<span class="s6">Clearly if we have thousand numbers of items, it is impossible to compute the frequency of all possible association rules and most of them will not have enough support anyway. In the near future, I will introduce Apriori algorithm that would help to prune the number of possible associate rules. In the next section, you will how to compute the two measurements of support and confidence using brute force method. </span>
+</p>
+<p class="p7">
+<span class="s1">Computing Support and Confidence</span>
+</p>
+<p class="p9">
+<span class="s6">To compute support and confidence, we first set our transaction data into binary data. </span>
+</p>
+<p class="p9">
+<img src="imgs/c1b6.png" style="width:5.28125in;height:1.1875in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">For simplicity, we call the items by its first letter (A for Apple, B for Banana, C for Cherry and D for Durian). Let us give name BinRecord to the binarized transaction record table. Each column in BinRecord are named as A_, B_, C_ and D_. We also set an array of 1 on the left of BinRecord to help computing the support count, and name it as BinOne. </span>
+</p>
+<p class="p9">
+<span class="s6">The support count denoted by </span><img src="imgs/10ac7.png" style="width:0.5833333in;height:0.20833333in;vertical-align:text-bottom;"><span class="s6">can be computed using the following MS Excel functions </span>
+</p>
+<p class="p9">
+<span class="s8">SUMIFS </span><span class="s6">(sum_range,criteria_range1,criteria1,criteria_range2,criteria2&hellip;) where we can adds the cells in a range that meet multiple criteria (this function only available from MS Excel2007). Since we have three possible items on independent variable and three possible items on dependent variable, we have total six criteria. Each one of the six criteria is a nested </span><span class="s8">IF </span><span class="s6">function to return column A_ if we found letter &ldquo;A&rdquo; in the list of possible item, return column B_ if we found letter &ldquo;B&rdquo; in the list of possible item and so on. The following picture show the first cell of support count. Once we type this cell, we can copy and paste to the other 49 cells below. </span>
+</p>
+<p class="p9">
+<img src="imgs/10e6c.png" style="width:6.25in;height:1.3645834in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">Number of transaction, N is always 7 in our demonstration example because we have only 7 data. Support (in percent) for each association rule is simply a ratio between support count and the number of transaction. </span>
+</p>
+<p class="p10">
+<img src="imgs/161c0.png" style="width:1.90625in;height:0.38541666in;vertical-align:text-bottom;"></p>
+<p class="p10">
+<img src="imgs/167b0.png" style="width:3.125in;height:2.1458333in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">Support for the independent variable, </span><img src="imgs/1adc6.png" style="width:0.32291666in;height:0.20833333in;vertical-align:text-bottom;"><span class="s6">, is even easier to compute than the support count for the union because it is only depend on the sum of the binarized transaction record. We use MS excel function HLOOKUP that will searches for a value in the top row of BinRecord table, and then returns a value in the same column from last row in the table using exact matched criteria. The format of the function is </span>
+</p>
+<p class="p10">
+<span class="s8">HLOOKUP</span><span class="s6">(</span><span class="s7">lookup_value,table_array,row_index_num,range_lookup</span><span class="s6">) </span>
+</p>
+<p class="p10">
+<img src="imgs/1b120.png" style="width:5.3020835in;height:1.4270834in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">Using HLOOKUP alone, however, will produce error when the lookup value is empty. Therefore we add function IFERROR (this function only available from MS Excel2007) to put the value to zero if it found such error. Since we have three columns for the independent variable, we add the function for the three columns. Thus, this spreadsheet only works for four numbers of items. </span>
+</p>
+<p class="p9">
+<span class="s6">Confidence is computed easily by taking ratio of support counts of the union of independent and dependent variables to the support count of independent variable. </span>
+</p>
+<p class="p10">
+<img src="imgs/1f4b1.png" style="width:2.1354167in;height:0.40625in;vertical-align:text-bottom;"></p>
+<p class="p10">
+<img src="imgs/1faf2.png" style="width:5.2083335in;height:1.6875in;vertical-align:text-bottom;"></p>
+<p class="p7"></p>
+<p class="p7">
+<span class="s1">Filtering Association Rules </span>
+</p>
+<p class="p9">
+<span class="s6">The third step to compute association rules of Market Basket Analysis is to apply two threshold criteria: </span><span class="s7">minimum support </span><span class="s6">and </span><span class="s7">minimum confidence. </span><span class="s6">Thus, we set these two thresholds into cells, for example we set 40% minimum support and 80% minimum confidence. </span>
+</p>
+<p class="p10">
+<img src="imgs/236d9.png" style="width:3.6458333in;height:0.7291667in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">Then we add one more column in the computation to include the rule if both percent support and confidence are above the thresholds. We can apply some conditional formatting to make it nice. </span>
+</p>
+<p class="p10">
+<img src="imgs/248d3.png" style="width:5.3125in;height:0.9479167in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">After that, we copy the first row of our rules to the rest of all possible rules. Figure below shows part of the result. </span>
+</p>
+<p class="p10">
+<img src="imgs/277fd.png" style="width:5.2083335in;height:3.9166667in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">To see the rule clearly, we use filtering in MS Excel and we found out two rules with high support and confidence </span>
+</p>
+<p class="p10">
+<img src="imgs/32521.png" style="width:4.4791665in;height:1.09375in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">If you download the MS Excel companion of this tutorial, you can play around with parameter minimum support and minimum confidence. After you change the parameter, you need to go to Data tab and Reapply the filter. </span>
+</p>
+<p class="p10">
+<img src="imgs/3493b.png" style="width:3.125in;height:1.1354166in;vertical-align:text-bottom;"></p>
+<p class="p9">
+<span class="s6">Different threshold value will produce broader or stricter rules. For example, if we set the minimum support to 25% and minimum confidence to 60% we can obtain 8 association rules as shown in the figure below. </span>
+</p>
+<p class="p10">
+<img src="imgs/3820f.png" style="width:4.4479165in;height:2.4791667in;vertical-align:text-bottom;"></p>
+<p class="p8">
+<span class="s1">Characteristics of Market Basket Analysis </span>
+</p>
+<p class="p9">
+<span class="s6">&bull;&nbsp; Both independent and dependent data are </span><span class="s7">nominal </span><span class="s6">or </span><span class="s7">categorical </span><span class="s6">type. Therefore, what we can do is only count the frequency of pattern. Market basket analysis is sometimes called as Mining Frequent Pattern. If the data are quantitative, it would be categorized into some interval (but the meaning is actually nominal) such as: age 0 to 1, age 1-5, age 5 to 12, age 12 to 19, etc. </span>
+</p>
+<p class="p9">
+<span class="s6">&bull;&nbsp; In Market Basket Analysis, we usually do not consider about the number of each items that the customers bought. Whether a customer buys one kg of apple or 10 kg of apple would be considered as the same set of apple. </span>
+</p>
+<p class="p9">
+<span class="s6">&bull;&nbsp; We do not use all transactions that are recorded. Only transactions of purchase of more than one item are considered as data. Transactions of single item are not used for the analysis. </span>
+</p>
+<p class="p9">
+<span class="s6">&bull;&nbsp; The input data are assumed to be clean from error and noise. </span>
+</p>
+<p class="p9">
+<span class="s6">Unlike the simple demonstration example here, the binarized transaction record is usually a sparse matrix (matrix with many zeros) because of very large number of transactional record and number of items. Computation and storing sparse matrix requires special algorithm.</span>
+</p>
+<p class="p3"></p>
+</body>
+</html>
+
